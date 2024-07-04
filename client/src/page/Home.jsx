@@ -25,7 +25,7 @@ const Home = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://mern-image-generation-iu01.onrender.com/api/v1/post', {
+      const response = await fetch('mern-image-generation-mocha.vercel.app/api/v1/post', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
