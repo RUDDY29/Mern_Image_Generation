@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 app.use('/api/v1/post', postRoutes);
 app.use('/api/v1/dalle', dalleRoutes);
@@ -22,11 +22,11 @@ app.get('/', async (req, res) => {
   });
 });
 
-app.use(express.static(path.join(__dirname, "/client/dist")));
+// app.use(express.static(path.join(__dirname, "/client/dist")));
 
-app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
-});
+// app.get("*", (req, res) => {
+// 	res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+// });
 
 const startServer = async () => {
   try {
